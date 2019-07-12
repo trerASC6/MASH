@@ -5,8 +5,9 @@ let halfChance = Math.floor(Math.random()*2)
 let Car = [process.argv[4], "Lambo", "Tesla", "Toyota", "Station Wagan", "Cardboard Box", "Dexter's Mom"];
 let Spouse = [process.argv[5], "Karen", "Treesh", "Gertrude", "Frank", "Victoria"];
 let Salary = [process.argv[6], "$100,000", "-$1,000,000", "$1", "$0.01"];
+let Career = [process.argv[7], "Garbage man", "Sewer cleaner", "Pro athlete", "Coder", "Professional bum"];
 function mash() {
-    return "You will live in a " + getHome() + ", and you will have " +getChildrenCount() + " kids! " + "You will drive around in a " + getCar() + "!" + " You will be married to " + getSpouse() + "!";
+    return "You will live in a " + getHome() + ", and you will have " +getChildrenCount() + " kids! " + "You will drive around in a " + getCar() + "!" + " You will be married to " + getSpouse() + "!" + " You will earn " + getSalary() + " a year working as a(n) " + getCareer() + "!";
 }
 console.log(mash());
 ////////////////////////////////////////////
@@ -45,3 +46,10 @@ function getSalary() {
     return sa; 
 }
 console.log(getSalary());
+
+function getCareer() {
+    const ca = Career[Math.floor(Math.random()*Career.length)];
+    return ca; 
+}
+console.log(getCareer());
+
